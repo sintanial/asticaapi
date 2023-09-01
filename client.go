@@ -71,7 +71,7 @@ type VisionDescribeRequest struct {
 	Input        string `json:"input"`
 	VisionParams string `json:"visionParams"`
 	GptPrompt    string `json:"gpt_prompt"`
-	GtpLength    string `json:"gtp_length"`
+	GptLength    string `json:"gpt_length"`
 }
 
 type VisionDescribeResponse struct {
@@ -127,7 +127,7 @@ func (self *Client) VisionDescribe(image string, options *VisionDescribeOptions,
 
 	if options != nil {
 		vdr.GptPrompt = options.GptPrompt
-		vdr.GtpLength = options.GptLength
+		vdr.GptLength = options.GptLength
 	}
 
 	var reqbody bytes.Buffer
